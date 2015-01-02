@@ -1,0 +1,6 @@
+flask
+flask-admin
+flask-sqlalchemy
+sqlalchemy
+sqlalchemy-utils
+passlib
