@@ -1,1 +1,1 @@
-from view import ModelView
+from view import ModelView, UserModelView

@@ -1,4 +1,4 @@
 flask-admin-utils
 =================
 
-Utils for flask admin
+Utils for Flask-Admin
