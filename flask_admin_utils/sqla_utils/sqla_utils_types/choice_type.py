@@ -18,4 +18,3 @@ class SelectField(Select2Field):
 
 
 field = SelectField
-formatter = None

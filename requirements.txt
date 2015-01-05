@@ -4,3 +4,5 @@ flask-sqlalchemy
 sqlalchemy
 sqlalchemy-utils
 passlib
+arrow
+colour

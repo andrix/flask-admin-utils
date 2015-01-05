@@ -1,1 +1,6 @@
-# coding: utf-8
+from wtforms.widgets import Input
+
+
+class ColorInput(Input):
+
+    input_type = 'color'

@@ -30,6 +30,7 @@ setup(
     platforms='any',
     install_requires=[
         "flask-admin",
+        "sqlalchemy-utils",
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",

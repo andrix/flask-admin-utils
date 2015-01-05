@@ -1,1 +1,5 @@
-# coding: utf-8
+from wtforms import PasswordField
+
+
+field = PasswordField
+formatter = None

@@ -1,1 +1,4 @@
-# coding: utf-8
+from ...fields import ColorField
+
+field = ColorField
+formatter = None
