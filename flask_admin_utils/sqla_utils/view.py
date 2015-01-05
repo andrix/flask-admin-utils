@@ -1,6 +1,6 @@
 from form import AdminModelConverter
 
-from formatter import BASE_FORMATTERS
+from sqla_utils_types import BASE_FORMATTERS
 
 from flask.ext.admin.contrib.sqla import ModelView as View
 

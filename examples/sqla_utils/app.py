@@ -37,7 +37,7 @@ class User(db.Model):
     email = db.Column(db.String(120), unique=True)
     password = db.Column(PasswordType(schemes=['md5_crypt']))
     status = db.Column(ChoiceType(choices=USERS_TYPE), default="1")
-    create = db.Column(ArrowType, default=arrow.utcnow)
+    create = db.Column(ArrowType, default=arrow.now())
     color = db.Column(ColorType, nullable=True)
 
     # Required for administrative interface. For python 3 please use __str__ instead.
