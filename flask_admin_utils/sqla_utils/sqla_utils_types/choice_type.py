@@ -15,3 +15,7 @@ class SelectField(Select2Field):
                     self.data = self.coerce(value)
             except (ValueError, TypeError):
                 self.data = None
+
+
+field = SelectField
+formatter = None
