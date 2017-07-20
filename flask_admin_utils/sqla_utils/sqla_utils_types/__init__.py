@@ -1,5 +1,7 @@
-from color_type import formatter as color_formatter
-from password_type import formatter as password_formatter
+from flask_admin_utils.sqla_utils.sqla_utils_types.color_type import (
+    formatter as color_formatter)
+from flask_admin_utils.sqla_utils.sqla_utils_types.password_type import (
+    formatter as password_formatter)
 
 from flask.ext.admin.model import typefmt
 

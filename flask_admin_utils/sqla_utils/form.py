@@ -2,19 +2,19 @@ from flask.ext.admin.model.form import converts
 from flask.ext.admin.contrib.sqla.form import AdminModelConverter as Converter
 
 try:
-    from sqla_utils_types import arrow_type
+    from flask_admin_utils.sqla_utils.sqla_utils_types import arrow_type
 except ImportError:
     arrow_type = None
 try:
-    from sqla_utils_types import password_type
+    from flask_admin_utils.sqla_utils.sqla_utils_types import password_type
 except ImportError:
     password_type = None
 try:
-    from sqla_utils_types import choice_type
+    from flask_admin_utils.sqla_utils.sqla_utils_types import choice_type
 except ImportError:
     choice_type = None
 try:
-    from sqla_utils_types import color_type
+    from flask_admin_utils.sqla_utils.sqla_utils_types import color_type
 except ImportError:
     color_type = None
 
