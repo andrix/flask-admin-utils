@@ -11,7 +11,7 @@ Install
 -------
 
 ```
-pip install -e https://github.com/andrix/flask-admin-utils.git
+pip install -e git+https://github.com/andrix/flask-admin-utils.git#egg=flask-admin-utils
 ```
 
 Usage

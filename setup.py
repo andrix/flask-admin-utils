@@ -21,11 +21,11 @@ setup(
     name="Flask-Admin-Utils",
     version=grep('__version__'),
     description="Utils for Flask-Admin",
-    long_description=read("README.rst"),
+    long_description=read("README.md"),
     author=grep('__author__'),
     author_email=grep('__author__'),
     license="BSD",
-    url="https://github.com/WolkoDav/flask-admin-utils",
+    url="https://github.com/andrix/flask-admin-utils",
     packages=find_packages(),
     platforms='any',
     install_requires=[
