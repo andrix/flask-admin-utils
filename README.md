@@ -10,12 +10,14 @@ This package provide a new view to support some types provided in the `sqlalchem
 Install
 -------
 
-`pip install -e https://github.com/andrix/flask-admin-utils.git`
+```
+pip install -e https://github.com/andrix/flask-admin-utils.git
+```
 
 Usage
 -----
 
-```
+```python
 from flask_admin_utils.sqla_utils import ModelView
 
 # flask-admin code
