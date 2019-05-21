@@ -1,6 +1,5 @@
 from sqlalchemy_utils import Choice
-
-from flask.ext.admin.form.fields import Select2Field
+from flask_admin.form.fields import Select2Field
 
 
 class SelectField(Select2Field):
@@ -15,6 +14,5 @@ class SelectField(Select2Field):
                     self.data = self.coerce(value)
             except (ValueError, TypeError):
                 self.data = None
-
 
 field = SelectField

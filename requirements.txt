@@ -6,3 +6,6 @@ sqlalchemy-utils
 passlib
 arrow
 colour
+wtforms
+python-dateutil
+jinja2

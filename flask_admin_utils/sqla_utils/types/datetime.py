@@ -1,11 +1,10 @@
 import datetime
 from dateutil import tz
 
-from flask.ext.admin.form.fields import DateTimeField as DTF
+from flask_admin.form.fields import DateTimeField
 
 
-class DateTimeField(DTF):
-
+class NewDateTimeField(DateTimeField):
     def process_formdata(self, valuelist):
         if valuelist:
             date_str = ' '.join(valuelist)
@@ -15,4 +14,4 @@ class DateTimeField(DTF):
                 self.data = None
                 raise ValueError(self.gettext('Not a valid datetime value'))
 
-field = DateTimeField
+field = NewDateTimeField

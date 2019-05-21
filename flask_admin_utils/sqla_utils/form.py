@@ -1,39 +1,47 @@
-from flask.ext.admin.model.form import converts
-from flask.ext.admin.contrib.sqla.form import AdminModelConverter as Converter
+
+from flask_admin.model.form import converts
+from flask_admin.contrib.sqla.form import AdminModelConverter as Converter
 
 try:
-    from sqla_utils_types import arrow_type
+    from flask_admin_utils.sqla_utils.types import datetime
 except ImportError:
-    arrow_type = None
+    datetime = None
 try:
-    from sqla_utils_types import password_type
+    from flask_admin_utils.sqla_utils.types import password
 except ImportError:
-    password_type = None
+    password = None
 try:
-    from sqla_utils_types import choice_type
+    from flask_admin_utils.sqla_utils.types import choice
 except ImportError:
-    choice_type = None
+    choice = None
 try:
-    from sqla_utils_types import color_type
+    from flask_admin_utils.sqla_utils.types import color
 except ImportError:
-    color_type = None
+    color = None
 
 
 class AdminModelConverter(Converter):
+    """Flask-admin type converter for
+    * arrow (Datetime)
+    * password
+    * choicetype
+    * colour
+    """
+
     @converts("ChoiceType")
     def convert_choice_type(self, field_args, **extra):
         field_args['choices'] = extra['column'].type.choices
         field_args['coerce'] = extra['column'].type.impl.python_type
-        return choice_type.field(**field_args)
+        return choice.field(**field_args)
 
     @converts("PasswordType")
     def convert_password(self, field_args, **extra):
-        return password_type.field(**field_args)
+        return password.field(**field_args)
 
     @converts("ArrowType")
     def convert_arrow(self, field_args, **extra):
-        return arrow_type.field(**field_args)
+        return datetime.field(**field_args)
 
     @converts("ColorType")
     def convert_color(self, field_args, **extra):
-        return color_type.field(**field_args)
+        return color.field(**field_args)
